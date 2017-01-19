@@ -1,4 +1,4 @@
-NAME = cheggwpt/php7
+NAME = cheggwpt/php7-nginx
 VERSION = 0.0.1
 
 .PHONY: all build test tag_latest release ssh
