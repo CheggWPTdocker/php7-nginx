@@ -1,0 +1,26 @@
+sudo: 
+  - required
+
+services:
+  - docker
+
+language: 
+  - node_js
+
+node_js:
+  - "6"
+
+install:
+  - npm install -g dockerlint
+
+before_script:
+  # - docker build --no-cache -t php_nginx_test .
+  # - docker run -d -p 127.0.0.1:80:80 --name php_nginx_test php_nginx_test sh -c "nginx"
+  # - docker ps -as
+
+script: 
+  - dockerlint Dockerfile
+  # - docker ps | grep -q php_nginx_test
+  # - .travis/test_http.sh
+  # - .travis/test_gzip.sh
+  # - docker logs php_nginx_test
