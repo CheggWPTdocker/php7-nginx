@@ -1,5 +1,5 @@
 NAME = cheggwpt/php7-nginx
-VERSION = 1.1.1
+VERSION = 1.1.2
 
 .PHONY: all build test tag_latest release
 
@@ -12,7 +12,7 @@ tag_latest:
 	docker tag $(NAME):$(VERSION) $(NAME):latest
 
 run:
-	docker run --name php7-nginx -d --rm -t $(NAME):$(VERSION)
+	docker run -p 8080:80 --name php7-nginx -d --rm -t $(NAME):$(VERSION)
 
 test:
 	docker build -t php_nginx_test .

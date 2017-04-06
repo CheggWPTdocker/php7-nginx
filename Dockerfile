@@ -1,4 +1,4 @@
-FROM cheggwpt/php7:1.1.1
+FROM cheggwpt/php7:1.1.2
 
 # Install Nginx
 # clean up the apk cache (no-cache still caches the indexes)
