@@ -1,12 +1,12 @@
 NAME = cheggwpt/php7-nginx
-VERSION = 1.1.0
+VERSION = 1.1.1
 
 .PHONY: all build test tag_latest release
 
 all: build tag_latest
 
 build:
-	docker build -t $(NAME):$(VERSION) .
+	docker build --no-cache -t $(NAME):$(VERSION) .
 
 tag_latest:
 	docker tag $(NAME):$(VERSION) $(NAME):latest
